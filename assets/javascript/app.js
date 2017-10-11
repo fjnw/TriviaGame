@@ -79,7 +79,7 @@ function question() {
 
 	// prints question w/ header
 	$('#question-list').html(
-		'<h4>Question '+ (correct+incorrect +1) +'</h4>' + // question # in header
+		'<h4>Question '+ (correct+incorrect +1 +" out of " + randomizedBank.length) +'</h4>' + // question # in header
 		'<p>'+ randomizedBank[correct+incorrect].question + '</p>'	// question text, below header
 	)
 
