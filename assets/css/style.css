@@ -4,6 +4,7 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+  user-select: none;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -61,13 +62,31 @@ body {
   margin-top: 28px;
 }
 
+#correct-counter {
+	font-size: 20px;
+	font-weight: 900;
+	color: limegreen;
+}
+
+#incorrect-counter {
+	font-size: 20px;
+	font-weight: 900;
+	color: red;
+}
+
+#timer {
+	font-size: 30px;
+	font-weight: 900;
+	color: tomato;
+}
+
 /* result-area */
 #result-area {
 	z-index: 2;
 	position: absolute;
-	top: 340px;
+	top: 350px;
 	width: 700px;
-	height: 420px;
+	height: 400px;
 	background: rgb(238,238,238);
 	margin: 0 0 0 -60px;
 	padding: 10px;
@@ -78,7 +97,12 @@ body {
 
 	#result-text {
 		font-weight: 900;
-		font-size: 40px;
+		font-size: 30px;
+	}
+	#result-end {
+		font-size: 20px;
+		font-weight: 900;
+		color: orange;
 	}
 
 /* Responsive: Portrait tablets and up */

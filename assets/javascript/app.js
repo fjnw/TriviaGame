@@ -76,12 +76,11 @@ function shuffle(array){
 
 // prints: question from randomizedBank
 function question() {
-
 	// prints question w/ header
 	$('#question-list').html(
 		'<h4>Question '+ (correct+incorrect +1 +" out of " + randomizedBank.length) +'</h4>' + // question # in header
 		'<p>'+ randomizedBank[correct+incorrect].question + '</p>'	// question text, below header
-	)
+	);
 
 	// prints choices in dropdown
 	option = '';
@@ -107,8 +106,7 @@ function	validate(){
 
 		// display results
 		$('#result-area').css("visibility","visible");
-		$('#result-text').html("You won!");
-		$('#result-image').html('<img src="assets/images/win.gif"/>');
+		$('#result-image').html('<img src="assets/images/correct.gif"/>');
 		$('#next-btn').css("visibility","visible");
 
 		if ( (correct+incorrect) == randomizedBank.length) {
@@ -121,8 +119,7 @@ function	validate(){
 
 		// display result
 		$('#result-area').css("visibility","visible");
-		$('#result-text').html("You lost!");
-		$('#result-image').html('<img src="assets/images/loss.gif"/>');
+		$('#result-image').html('<img src="assets/images/incorrect.gif"/>');
 		$('#next-btn').css("visibility","visible");
 
 		if ( (correct+incorrect) == randomizedBank.length) {
@@ -163,7 +160,7 @@ function gameOver(){
 	$('#next-btn').css("visibility","hidden");
 
 	// display result
-	$('#result-text').append("<p>...Game over...</p>");
+	$('#result-text').html('<p id="result-end">...GAME OVER...</p>');
 }
 
 
@@ -174,7 +171,7 @@ function gameOver(){
 // start-btn
 $("#start-btn").on('click', function(){
 	startGame();
-})
+});
 
 
 //===========================================//
@@ -183,16 +180,20 @@ $("#start-btn").on('click', function(){
 function startGame() {
 	// hides start-btn + displays question area
 	initGame();
+
 	// randomize randomizedBank
 	shuffle(randomizedBank);
-	// display question()
+
+	// display question
 	question();
+
 	// starts timer
 	startTimer();
+
 	// on click answer
 	$(function() {// Shorthand for $(document).ready(function() {
       $('select').change(function() {
-      	selected = ($(this).val())
+      	selected = ($(this).val());
       });
 
 	});
@@ -215,10 +216,10 @@ var intervalId; //  Variable that will hold our setInterval that runs the stopwa
 var clockRunning = false; // prevents the clock from being sped up unnecessarily
 
 function startTimer(){
-	time = 4
+	time = 4;
 
 	if (!clockRunning) {
-		intervalId = setInterval(count, 1000)
+		intervalId = setInterval(count, 1000);
 		clockRunning = true;
 	}
 }
@@ -227,7 +228,6 @@ function count() {
 	time--;
 
 	var converted = timeConverter(time);
-	console.log(converted);
 
 	$("#timer").html(converted);
 
@@ -238,7 +238,7 @@ function count() {
 
 function stopTimer(){
 	clearInterval(intervalId);
-	clockRunning = false
+	clockRunning = false;
 }
 
 function timeConverter(t) {
