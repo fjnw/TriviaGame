@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<title>Trivia Game</title>
+</head>
+
+<body>
+
+<div class="container">
+
+	<div class="jumbotron">
+		<h1>Trivia Game</h1>
+
+		<a class="btn btn-lg btn-success" id="start-btn" role="button">Start Game</a>
+		<a class="btn btn-lg btn-warning" id="next-btn" role="button" style="visibility: hidden">Next</a>
+		<a class="btn btn-lg btn-danger" id="restart-btn" role="button" style="visibility: hidden">Restart Game</a>
+		<br><br>
+
+		<div class="row marketing" id="game-area" style="visibility: hidden">
+			<p class="lead">
+				Correct: <span class="badge" id="correct-counter"></span>
+				<br>
+				Incorrect:<span class="badge" id="incorrect-counter"></span>
+				<br>
+				<span id="timer"></span>
+			</p>
+
+			<div class="col-lg-8" id="question-list"></div>
+			<div class="col-lg-4">
+				<select id="choices-list"></select>
+			</div>
+
+			<div class="row marketing" id="result-area" style="visibility: hidden">
+				<p id="result-text"></p>
+				<span id="result-image"></span>
+			</div>
+		</div>
+
+	</div> 
+
+	<footer class="footer">
+		<p>&copy; TriviaGame 2017</p>
+	</footer>
+
+</div> <!-- /container -->
+
+<script type="text/javascript" src="assets/javascript/app.js"></script>
+
+</body>
+</html>
