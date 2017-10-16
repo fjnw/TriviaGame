@@ -84,7 +84,7 @@ body {
 #result-area {
 	z-index: 2;
 	position: absolute;
-	top: 350px;
+	top: 380px;
 	width: 700px;
 	height: 400px;
 	background: rgb(238,238,238);
@@ -92,7 +92,7 @@ body {
 	padding: 10px;
 }
 	#result-area img {
-		width: 500px;
+		width: 80%;
 	}
 
 	#result-text {

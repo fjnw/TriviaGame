@@ -23,7 +23,6 @@
 		<h1>Trivia Game</h1>
 
 		<a class="btn btn-lg btn-success" id="start-btn" role="button">Start Game</a>
-		<a class="btn btn-lg btn-warning" id="next-btn" role="button" style="visibility: hidden">Next</a>
 		<a class="btn btn-lg btn-danger" id="restart-btn" role="button" style="visibility: hidden">Restart Game</a>
 		<br><br>
 
@@ -37,13 +36,11 @@
 			</p>
 
 			<div class="col-lg-8" id="question-list"></div>
-			<div class="col-lg-4">
-				<select id="choices-list"></select>
-			</div>
+			<div class="col-lg-4" id="choices-area"></div>
 
 			<div class="row marketing" id="result-area" style="visibility: hidden">
 				<p id="result-text"></p>
-				<span id="result-image"></span>
+				<div><span id="result-image"></span></div>
 			</div>
 		</div>
 
@@ -55,7 +52,7 @@
 
 </div> <!-- /container -->
 
-<script type="text/javascript" src="assets/javascript/app.js"></script>
+<script type="text/javascript" src="assets/javascript/new-app.js"></script>
 
 </body>
 </html>
